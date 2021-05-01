@@ -23,9 +23,6 @@ while True:
     # read moisture level through capacitive touch pad
     touch = ss.moisture_read()
 
-    # read temperature from the temperature sensor
-    temp = ss.get_temp()
-
     if touch<900:
         cur_led=red
     elif touch>900 and temp<1300:
@@ -38,4 +35,4 @@ while True:
     cur_led.value=False
     time.sleep(1)
 
-    print("temp: " + str(temp) + "  moisture: " + str(touch))
+    print("Moisture: " + str(touch))
