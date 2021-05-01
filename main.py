@@ -21,18 +21,21 @@ yellow.direction=digitalio.Direction.OUTPUT
 
 while True:
     # read moisture level through capacitive touch pad
-    touch = ss.moisture_read()
+    cur_moisture = ss.moisture_read()
 
-    if touch<900:
+    if cur_moisture < 600:
+        print('red')
         cur_led=red
-    elif touch>900 and temp<1300:
+    elif cur_moisture > 600 and cur_moisture < 900:
+        print('yellow')
         cur_led=yellow
     else:
-        curl_led=green
+        print('green')
+        cur_led=green
 
     cur_led.value=True
     time.sleep(1)
     cur_led.value=False
     time.sleep(1)
 
-    print("Moisture: " + str(touch))
+    print("Moisture: " + str(cur_moisture))

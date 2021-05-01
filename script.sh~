@@ -1,0 +1,2 @@
+source plant_monitor/plant/bin/activate
+python3 main.py
