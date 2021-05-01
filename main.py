@@ -28,22 +28,10 @@ while True:
 
     if touch<900:
         cur_led=red
-        #red.value=True
-        #time.sleep(1)
-        #red.value=False
-        #time.sleep(1)
     elif touch>900 and temp<1300:
         cur_led=yellow
-        #yellow.value=True
-        #time.sleep(1)
-        #yellow.value=False
-        #time.sleep(1)
     else:
         curl_led=green
-        #green.value=True
-        #time.sleep(1)
-        #green.value=False
-        #time.sleep(1)
 
     cur_led.value=True
     time.sleep(1)
