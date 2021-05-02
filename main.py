@@ -24,13 +24,10 @@ while True:
     cur_moisture = ss.moisture_read()
 
     if cur_moisture < 600:
-        print('red')
         cur_led=red
     elif cur_moisture > 600 and cur_moisture < 900:
-        print('yellow')
         cur_led=yellow
     else:
-        print('green')
         cur_led=green
 
     cur_led.value=True
@@ -38,4 +35,4 @@ while True:
     cur_led.value=False
     time.sleep(1)
 
-    print("Moisture: " + str(cur_moisture))
+    # print("Moisture: " + str(cur_moisture))
